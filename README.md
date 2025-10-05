@@ -1,60 +1,60 @@
-🌸✨ uchan (ucan) clang OS Toolchain ✨🌸
+🌸✨ uchan (ucan) Clang OS Toolchain ✨🌸
 
-⚠️ Please read this first~
-Hi~ Welcome to the uchan (ucan) clang OS toolchain!
-This is not just any clang—it’s a custom version made with love 💖, for those who enjoy coding, kernel building, or just want to try something wibu yet serious~ 🐰💻
+⚠️ Please read this first
+Hi~ welcome to the uchan (ucan) clang OS toolchain!
+This is not just any clang—it’s a custom version made with love 💖 for kernel builders, ROM tweakers, or anyone who loves coding with a lil’ wibu spice 🐰💻
 
-Description:
+📖 Description
+
 Custom LLVM/Clang toolchain by uchan (ucan) 🌸
 
 Vendor: uchan (ucan) clang OS
 
-Compiler: clang + clang++
+Compiler: clang, clang++
 
 Linker: ld.lld
 
-Optimizer: Polly Loop Optimizer
+Optimizer: Polly Loop Optimizer ✨
 
-Sanitizers: Compiler-rt
+Sanitizers: compiler-rt 🛡️
 
-Multi-arch target: x86_64, AArch64, ARM, RISCV, BPF 🐾
+Targets: x86_64, AArch64, ARM, RISCV, BPF 🐾
 
-Stage1-only build for stability ⚡
+Build Type: Stage1-only for stability ⚡
 
-Optimized for kernel & system-level builds
+Optimized for kernel & system-level builds. Perfect for:
+✔️ Kernel building
+✔️ ROM tweaks
+✔️ Wibu-style compilation 🐱‍👤💖
 
-Perfect for kernel building, ROM tweaks, or just wibu-style compilation 🐱‍👤💖
-
-Installation:
-
-Extract the toolchain:
+⚙️ Installation
+# Extract toolchain
 tar -xf uchan-clang-os-toolchain.tar.xz -C /opt/
 
-Add to PATH:
+# Add to PATH
 export PATH="/opt/uchan-clang/bin:$PATH"
 
-Check clang version:
-clang -v
-(Vendor: uchan (ucan) clang OS)
+# Check clang vendor string
+clang -v   # Vendor: uchan (ucan) clang OS
 
-Usage Examples:
-
-Compile a simple program:
+💡 Usage Examples
+🔹 Compile a simple program
 echo 'int main() { return 0; }' > test.c
 clang test.c -o test
 ./test
-echo $? # Should output 0 😎
+echo $?   # Should output 0 😎
 
-Build Linux Kernel:
+🔹 Build Linux Kernel
 git clone https://github.com/torvalds/linux.git
-
 cd linux
+
 make LLVM=1 LLVM_IAS=1 CC=clang LD=ld.lld defconfig
 make LLVM=1 LLVM_IAS=1 CC=clang LD=ld.lld -j$(nproc)
 
-Your kernel compiles successfully with a wibu smile 😸💖
 
-Files Installed:
+Your kernel will compile successfully with a wibu smile 😸💖
+
+📂 Installed Files
 
 /opt/uchan-clang/bin/ → clang, clang++, ld.lld, llvm-*
 
@@ -62,42 +62,34 @@ Files Installed:
 
 /opt/uchan-clang/include/ → headers
 
-Release Notes:
+📝 Release Notes
 
-Custom vendor string: uchan (ucan) clang OS 🌸
+✨ Custom vendor string: uchan (ucan) clang OS
+✨ Stable stage1-only build
+✨ LLD linker included
+✨ Polly optimizer enabled
+✨ Compiler-rt sanitizers
+✨ Multi-arch target ✅
+✨ Test compile & kernel build = PASSED 😻
 
-Stable stage1-only build
+⚠️ Known Issues
 
-LLD linker included
+Extracting to /opt/ may require root access 🐾
 
-Polly optimizer enabled
+If ninja install errors occur, use manual install or DESTDIR workaround
 
-Compiler-rt sanitizers
+## 🌸 Support / Donations 🌸
 
-Multi-arch target ✅
+Konbanwa~ 💕  
+If you like this toolchain and want to support its development (so I can buy more 🍵 tea & 🐾 neko snacks while coding 😆), you can donate via:
 
-Test compile & kernel build successful! 😻
+<a href="https://www.buymeacoffee.com/ucann" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-Known Issues:
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H61M46VE)
 
-Extracting to /opt/ may require root 🐾
+[![Support on Trakteer](https://img.shields.io/badge/☕_Support-Trakteer-red?style=for-the-badge)](https://trakteer.id/ucann)
 
-Ninja install errors can use manual install / DESTDIR workaround
-
-Support / Donations:
-If you like this toolchain and want to support its development, you can donate via:
-
-Saweria: https://saweria.co/ucan
- 🍵
-
-Buy Me a Coffee: https://www.buymeacoffee.com/ucan
- ☕
-
-Ko-fi: https://ko-fi.com/ucan
- 💌
-
-Trakteer: https://trakteer.id/ucan
- 🍡
+[![Donate on Saweria](https://i.ibb.co.com/xctGvQY/download.png) ](https://saweria.co/ucan01)
 
 Every support makes the creator’s heart melt 🥹💖
 Thank you so much~ 😘🌸
